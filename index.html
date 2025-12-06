@@ -6,113 +6,23 @@
     <title>Fanfik 14 – IMPREZA U VIPEREKA</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root{
-            --bg:#0d0015;
-            --main:#00ffea;
-            --accent:#ff00ff;
-            --dark:#1a0033;
-        }
-        body{
-            margin:0;
-            background:var(--bg);
-            color:#fff;
-            font-family:'Roboto Mono',monospace;
-            overflow-x:hidden;
-        }
-        .container{
-            max-width:900px;                 /* mniejszy kontener */
-            margin:0 auto;
-            padding:6vh 4vw;                 /* DUŻO WIĘCEJ ODSTĘPÓW */
-        }
-        header{
-            padding:10vh 0 8vh;              /* góra i dół oddalone */
-            text-align:center;
-        }
-        .title{
-            font-family:'Bebas Neue',sans-serif;
-            font-size:clamp(3.5rem,10vw,7rem);   /* mniejszy tytuł */
-            background:linear-gradient(90deg,#00ffea,#ff00ff,#00ffea);
-            background-size:200%;
-            -webkit-background-clip:text;
-            background-clip:text;
-            color:transparent;
-            animation:gradient 6s infinite;
-        }
+        :root{--bg:#0d0015;--main:#00ffea;--accent:#ff00ff;--dark:#1a0033}
+        body{margin:0;background:var(--bg);color:#fff;font-family:'Roboto Mono',monospace;overflow-x:hidden}
+        .container{max-width:1000px;margin:180px auto;background:var(--bg);padding:0;box-shadow:0 0 160px var(--main)}
+        header{padding:12vh 0;text-align:center}
+        .title{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,12vw,8rem);background:linear-gradient(90deg,var(--main),var(--accent),var(--main));background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradient 6s infinite}
         @keyframes gradient{background-position:200%}
-        .subtitle{
-            font-size:2.5rem;
-            margin:3rem 0;
-        }
-        .warning{
-            background:var(--dark);
-            border:6px double var(--main);
-            padding:4rem 3rem;
-            margin:10vh 0;                   /* bardzo dużo odstępu */
-            border-radius:30px;
-            text-align:center;
-            font-size:2rem;
-            box-shadow:0 0 140px var(--main);
-        }
-        .chapters{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:4rem;
-            margin:12vh 0;                   /* jeszcze więcej odstępu */
-        }
-        .chapter{
-            background:var(--dark);
-            border:5px solid var(--main);
-            padding:4rem 2rem;
-            text-align:center;
-            cursor:pointer;
-            transition:all .6s;
-            border-radius:30px;
-            box-shadow:0 0 100px var(--main);
-        }
-        .chapter:hover{
-            background:var(--main);
-            color:#000;
-            transform:scale(1.1);
-            box-shadow:0 0 200px var(--main);
-        }
-        .chapter h3{
-            font-size:2.8rem;
-            margin:0 0 1.5rem;
-            letter-spacing:4px;
-        }
-        .active{
-            border:8px solid #fff;
-            box-shadow:0 0 300px #fff;
-        }
-        .content{
-            display:none;
-            padding:10rem 6rem;              /* OGROMNE ODSTĘPY W ŚRODKU */
-            background:var(--dark);
-            border:8px solid var(--main);
-            border-radius:50px;
-            margin:12vh 0;                   /* bardzo dużo miejsca między rozdziałami */
-            font-size:2.2rem;
-            line-height:3.2;
-        }
-        .active-content{
-            display:block;
-            animation:fade 1.8s;
-        }
-        @keyframes fade{
-            from{opacity:0;transform:scale(.9)}
-            to{opacity:1;transform:scale(1)}
-        }
-        .blood{
-            color:var(--main);
-            font-weight:900;
-            font-size:4rem;
-            text-shadow:0 0 80px var(--main);
-        }
-        .train{
-            color:#ff00ff;
-            font-size:5.5rem;
-            text-shadow:0 0 120px #ff00ff;
-        }
+        .subtitle{font-size:3rem;margin:4rem 0}
+        .warning{background:var(--dark);border:8px double var(--main);padding:5rem;margin:12vh 0;border-radius:40px;text-align:center;font-size:2.2rem;box-shadow:0 0 180px var(--main)}
+        .chapters{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:5rem;margin:16vh 0}
+        .chapter{background:var(--dark);border:6px solid var(--main);padding:4rem 2rem;text-align:center;cursor:pointer;transition:all .7s;border-radius:40px;box-shadow:0 0 120px var(--main)}
+        .chapter:hover{background:var(--main);color:#000;transform:scale(1.1);box-shadow:0 0 250px var(--main)}
+        .chapter h3{font-size:2.4rem;margin:0;line-height:1.4}
+        .active{border:10px solid #fff;box-shadow:0 0 400px #fff}
+        .content{display:none;padding:14rem 8rem;background:var(--dark);border:10px solid var(--main);border-radius:60px;margin:16vh 0;font-size:2.4rem;line-height:3.4}
+        .active-content{display:block}
+        .blood{color:var(--main);font-weight:900;font-size:4.5rem;text-shadow:0 0 100px var(--main)}
+        .train{color:#ff00ff;font-size:6rem;text-shadow:0 0 140px #ff00ff}
     </style>
 </head>
 <body>
@@ -129,9 +39,9 @@
     <div class="chapters">
         <div class="chapter active" onclick="show(1)"><h3>01 – PRZYGOTOWANIA</h3></div>
         <div class="chapter" onclick="show(2)"><h3>02 – PAGRIŚ WKRACZA</h3></div>
-        <div class="chapter" onclick="show(3)"><h3>03 – DOMINACJA</h3></div>
-        <div class="chapter" onclick="show(4)"><h3>04 – POCIĄG</h3></div>
-        <div class="chapter" onclick="show(5)"><h3>05 – FONTANNA</h3></div>
+        <div class="chapter" onclick="show(3)"><h3>03 – DOMINACJA NAD KAŻDYM</h3></div>
+        <div class="chapter" onclick="show(4)"><h3>04 – WIELKI POCIĄG KANAPKOWY</h3></div>
+        <div class="chapter" onclick="show(5)"><h3>05 – FONTANNA I TRIUMF</h3></div>
     </div>
 
     <!-- ROZDZIAŁ 1 -->
@@ -195,7 +105,7 @@
         <p>Wszyscy leżą w kałuży spermy i krwi – dyszą, drżą, nie mogą się ruszyć.</p>
         <p>Pagriś stoi nad nimi – czerwona kurtka w spermie, kutas wciąż twardy.</p>
         <p>„To była moja impreza. I będzie następna.”</p>
-        <p style="text-align:center;font-size:8rem;color:#00ffea;text-shadow:0 0 250px #00ffea">
+        <p style="text-align:center;font-size:10rem;color:#00ffea;text-shadow:0 0 300px #00ffea">
             PAGRIŚ KRÓLEM IMPREZY<br>
             KONIEC.
         </p>
