@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanfik 14 – IMPREZA U VIPEREKA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg:#0d0015;
+            --main:#00ffea;
+            --accent:#ff00ff;
+            --dark:#1a0033;
+        }
+        body{
+            margin:0;
+            background:var(--bg);
+            color:#fff;
+            font-family:'Roboto Mono',monospace;
+            overflow-x:hidden;
+        }
+        .container{
+            max-width:1000px;               /* zmniejszone z 1400px */
+            margin:0 auto;
+            padding:2rem 1rem;              /* mniejsze pady */
+        }
+        header{
+            height:auto;                    /* nie 100vh – nie przykleja się do ekranu */
+            padding:8rem 0 4rem;
+            text-align:center;
+        }
+        .title{
+            font-family:'Bebas Neue',sans-serif;
+            font-size:clamp(4rem,12vw,9rem);   /* mniejszy */
+            background:linear-gradient(90deg,#00ffea,#ff00ff,#00ffea);
+            background-size:200%;
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+            animation:gradient 6s infinite;
+        }
+        @keyframes gradient{background-position:200%}
+        .subtitle{
+            font-size:2.8rem;
+            margin:1.5rem 0;
+            animation:neon 3s infinite;
+        }
+        @keyframes neon{
+            0%,100%{text-shadow:0 0 30px #00ffea}
+            50%{text-shadow:0 0 90px #ff00ff}
+        }
+        .warning{
+            background:var(--dark);
+            border:6px double var(--main);
+            padding:3rem;
+            margin:4rem 0;
+            border-radius:30px;
+            text-align:center;
+            font-size:2rem;
+            box-shadow:0 0 120px var(--main);
+            backdrop-filter:blur(10px);
+        }
+        .chapters{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:2rem;
+            margin:6rem 0;
+        }
+        .chapter{
+            background:linear-gradient(135deg,var(--dark),#000);
+            border:5px solid var(--main);
+            padding:3rem;
+            text-align:center;
+            cursor:pointer;
+            transition:all .6s;
+            border-radius:30px;
+            box-shadow:0 0 80px var(--main);
+        }
+        .chapter:hover{
+            background:var(--main);
+            color:#000;
+            transform:scale(1.08);
+            box-shadow:0 0 180px var(--main);
+        }
+        .chapter h3{font-size:2.8rem;margin:0 0 1rem;letter-spacing:4px}
+        .active{border:8px solid #fff;box-shadow:0 0 250px #fff}
+        .content{
+            display:none;
+            padding:6rem 4rem;
+            background:var(--dark);
+            border:8px solid var(--main);
+            border-radius:40px;
+            margin:6rem 0;
+            font-size:2rem;
+            line-height:2.6;
+        }
+        .active-content{display:block;animation:cyber 1.5s}
+        @keyframes cyber{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+        .blood{
+            color:var(--main);
+            font-weight:900;
+            font-size:4rem;
+            text-shadow:0 0 60px var(--main);
+        }
+        .train{
+            color:#ff00ff;
+            font-size:5rem;
+            text-shadow:0 0 100px #ff00ff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1 class="title">FANFIK 14</h1>
+        <div class="subtitle">IMPREZA U VIPEREKA</div>
+        <div class="warning">
+            18+ • 5 ROZDZIAŁÓW • PAGRIŚ DOMINUJE • POCIĄG KANAPKOWY • FONTANNA SPERMY • ZERO LITOŚCI
+        </div>
+    </header>
+
+    <div class="chapters">
+        <div class="chapter active" onclick="show(1)"><h3>01 – PRZYGOTOWANIA</h3></div>
+        <div class="chapter" onclick="show(2)"><h3>02 – PAGRIŚ WKRACZA</h3></div>
+        <div class="chapter" onclick="show(3)"><h3>03 – DOMINACJA</h3></div>
+        <div class="chapter" onclick="show(4)"><h3>04 – POCIĄG</h3></div>
+        <div class="chapter" onclick="show(5)"><h3>05 – FONTANNA</h3></div>
+    </div>
+
+    <!-- ROZDZIAŁ 1 -->
+    <div id="ch1" class="content active-content">
+        <p class="blood">ROZDZIAŁ 1 – PRZYGOTOWANIA DO IMPREZY</p>
+        <p>Mieszkanie Vipeereka – sobota, 21:30. Neonowe lampy pulsują, muzyka dudni, zapach alkoholu i potu.</p>
+        <p>Gloje – 2,10 m, 35 cm zakrzywiony kutas – siedzi na kanapie, piwo w jednej ręce, drugą głaszcze się po jajach.</p>
+        <p>Barakuda69 w skórzanej kurtce – opowiada, jak kiedyś rżnął trzy osoby naraz, jego kutas 27 cm już sterczy.</p>
+        <p>Kamix w kapturze z RGB – miesza drinki i pokazuje nowe zabawki analne.</p>
+        <p>K4yez_ – tatuaże na całym ciele, kutas 24 cm – tańczy z Elobelo w kiecce kota.</p>
+        <p>Elobelo – czarny kot z kolczykiem prince albert – mruczy i liże piwo z sutka K4yeza.</p>
+        <p>Vipeerek – jaszczur w smokingu, ogon macha – „To będzie noc, której nikt nie zapomni!”</p>
+        <p>Nikt nie wie, że Pagriś już stoi pod drzwiami – czerwona kurtka, oczy jak dwa rubiny, kutas 24 cm twardy jak stal.</p>
+    </div>
+
+    <!-- ROZDZIAŁ 2 -->
+    <div id="ch2" class="content">
+        <p class="blood">ROZDZIAŁ 2 – PAGRIŚ WKRACZA</p>
+        <p>23:47 – drzwi wyważone potężnym kopniakiem.</p>
+        <p>Pagriś wchodzi powoli – czerwona kurtka błyszczy, spodnie już rozpięte, kutas 24 cm wampirzy sterczy dumnie.</p>
+        <p>„Czas na prawdziwą imprezę, suki” – głos niski, gardłowy.</p>
+        <p>Wszyscy zamierają. Gloje próbuje wstać – Pagriś kopniakiem w jądra, olbrzym pada na kolana.</p>
+        <p>Barakuda otwiera usta – Pagriś łapie go za włosy i wbija kutasa w gardło po same jądra.</p>
+        <p>K4yez_ próbuje uciec – Pagriś chwyta go za tatuaże i rzuca na podłogę.</p>
+        <p>Elobelo miauczy – Pagriś łapie go za uszy kota i wbija kutasa w gardło.</p>
+        <p>Vipeerek – „Pagriś… co ty…” – ale Pagriś łapie go za ogon i rzuca na kanapę.</p>
+        <p>„Dzisiaj ja tu rządzę. Rozbierajcie się. Wszyscy.”</p>
+    </div>
+
+    <!-- ROZDZIAŁ 3 -->
+    <div id="ch3" class="content">
+        <p class="blood">ROZDZIAŁ 3 – PAGRIŚ DOMINUJE NAD KAŻDYM</p>
+        <p>Gloje – Pagriś wbija się w dupę 24 cm – olbrzym wyje, jego 35 cm macha bezwładnie, krew spływa po udach.</p>
+        <p>Barakuda – na kolanach, Pagriś w gardle – dławi się, łzy spływają, ale Pagriś wbija głębiej.</p>
+        <p>Kamix – na stole, nogi w górze – Pagriś wchodzi bez smarowania, krew leje się na blat.</p>
+        <p>K4yez_ – przy ścianie, Pagriś w gardle i dupie na zmianę – RGB tatuaże w spermie.</p>
+        <p>Elobelo – na kanapie, Pagriś w dupie – kolczyk wbity w kanapę, kot miauczy z rozkoszy.</p>
+        <p>Vipeerek – próbuje się bronić – Pagriś łapie za ogon, wbija się w dupę – „Teraz ty, mój mały jaszczurku” – Vipeerek wyje.</p>
+        <p>Każdy dochodzi po kolei – sperma tryska wszędzie, Pagriś nie przestaje.</p>
+    </div>
+
+    <!-- ROZDZIAŁ 4 -->
+    <div id="ch4" class="content">
+        <p class="blood">ROZDZIAŁ 4 – WIELKI POCIĄG KANAPKOWY</p>
+        <p>Wszyscy na podłodze – jedna linia:</p>
+        <p class="train">PAGRIŚ → GLOJE → BARAKUDA → KAMIX → K4YEZ_ → ELOBELO → VIPEREK</p>
+        <p>Pagriś wbija się w Gloje – Gloje (35 cm) w Barakudę – Barakuda w Kamixa – Kamix w K4yez_ – K4yez_ w Elobelo – Elobelo w Vipeerka.</p>
+        <p>Vipeerek na końcu – jego 25 cm macha bezużytecznie, wyje z rozkoszy i bólu.</p>
+        <p>Pagriś dyktuje tempo – „Szybciej, suki! Głębiej!” – wszyscy rżną w rytm jego bioder.</p>
+        <p>Godzina non-stop – sperma tryska w każdej dziurze, krew spływa po udach, jęki mieszają się z muzyką.</p>
+        <p>Pagriś dochodzi w Gloje – Gloje w Barakudzie – i tak dalej – łańcuchowa eksplozja spermy.</p>
+    </div>
+
+    <!-- ROZDZIAŁ 5 -->
+    <div id="ch5" class="content">
+        <p class="blood">ROZDZIAŁ 5 – FONTANNA SPERMY I TRIUMF PAGRYSIA</p>
+        <p>Pagriś wyciąga się z Gloje – „Klękać, suki!”</p>
+        <p>Wszyscy klęczą w kółku – Pagriś w centrum.</p>
+        <p>Sześć kutasów dochodzi naraz – Pagriś wylewa się na wszystkich – fontanna spermy zalewa pokój.</p>
+        <p>Pagriś otwiera usta – pije wszystko, co leci – sperma spływa po brodzie, kurtce, włosach.</p>
+        <p>Wszyscy leżą w kałuży spermy i krwi – dyszą, drżą, nie mogą się ruszyć.</p>
+        <p>Pagriś stoi nad nimi – czerwona kurtka w spermie, kutas wciąż twardy.</p>
+        <p>„To była moja impreza. I będzie następna.”</p>
+        <p style="text-align:center;font-size:8rem;color:#00ffea;text-shadow:0 0 250px #00ffea">
+            PAGRIŚ KRÓLEM IMPREZY<br>
+            KONIEC.
+        </p>
+    </div>
+</div>
+
+<script>
+    function show(n) {
+        document.querySelectorAll('.content').forEach(c => c.classList.remove('active-content'));
+        document.getElementById('ch'+n).classList.add('active-content');
+        document.querySelectorAll('.chapter').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.chapter')[n-1].classList.add('active');
+    }
+</script>
+
+</body>
+</html>
